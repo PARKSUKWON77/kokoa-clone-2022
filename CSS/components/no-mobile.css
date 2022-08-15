@@ -5,10 +5,37 @@
     width: 100vw;
     background-color: var(--yellow);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     font-size: 32px;
     top: 0;
+    transition: 0.3s ease-in-out;
+}
+
+#no-mobile span:nth-child(2) {
+    font-size: 24px;
+}
+#no-mobile span:last-child {
+    font-size: 16px;
+}
+
+@keyframes LastAnimation {
+    0% {
+        color: black;
+    }
+    50% {
+        font-size: 64px;
+        color: tomato;
+    }
+    100% {
+        color: black;
+    }
+}
+
+#no-mobile span {
+    padding: 10px;
+    animation: LastAnimation 3s ease-in-out infinite;
 }
 
 @media screen and (max-width: 656px) {
